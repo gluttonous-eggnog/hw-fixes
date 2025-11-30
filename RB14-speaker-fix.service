@@ -1,0 +1,12 @@
+[Unit]
+Description=Razer Blade 14 audio fix for speakers
+After=default.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStartPre=/bin/sleep 5
+ExecStart=/usr/local/bin/ALC298_speakers.sh
+
+[Install]
+WantedBy=default.target
